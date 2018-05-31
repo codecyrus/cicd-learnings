@@ -104,6 +104,8 @@
 - Taggable with PropertySets (e.g. Datacenter location, VNF)
 - Publish once - deploy anywhere
 
++++
+
 # Blockers
 
 - A story required to support users/groups in this model
