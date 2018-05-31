@@ -127,11 +127,18 @@ picture here ...
 
 #### Application lifecycle
 
+![Package Stack](img/pkg-stack.png)
+
 - e.g. Most deployments on Ubuntu 16.04/14.04
 - What if we need a newer (latest?) version of upstream package?
     - To take on upstream improvements/features
     - Security hotfixes, bugfixes, etc
-- Gitlab can mirror upstream git repos
+
++++
+
+#### Application lifecycle ...
+
+- Gitlab mirrors upstream git repo
 - Gitlab triggers CI runner job to build software for target release
 - Runners publish software to artifactory repos via CLI or API
 - End-systems consume updates through artifactory repos
