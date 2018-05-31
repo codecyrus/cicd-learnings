@@ -48,7 +48,6 @@
 - Shared runners have problems (security, debuggability)
 - Pipelines should incorporate private runners for in-tenant config/deploy
 - We provide an ansible role and example plays to help
-- Role supports different executor types
 
 +++
 
@@ -60,6 +59,8 @@
 - Other problems with runner reliability, registration, git cloning
 - Jobs time out even before execution begins
 - Need to be aware of this in future DC deployments
+
++++
 
 ## Impediment - HTTP_PROXY
 
