@@ -3,7 +3,7 @@
 
 * CICD Learnings
 * Runner Topology
-* Artifactory 
+* Artifactory
 * Problems, Mitigations
 
 ---
@@ -55,7 +55,7 @@ What?
 
 +++
 
-# Repository for VNF artefacts
+### Repository for VNF artefacts
 
 - Artefact cache for VNF artefacts (VM images, CSAR Files)
 - Versioned artefacts
