@@ -82,6 +82,8 @@
 
 # Artifactory
 
+picture here ...
+
 - The universal binary repository
 - Pan-Net vision - add an important validator to the CI/CD pipeline
 - Testing/Security/Pre-emptive monitoring
@@ -108,6 +110,8 @@
 
 # Blockers
 
+- Poor adoption - blocking full integration
+- Misunder
 - A story required to support users/groups in this model
 
 +++
@@ -117,15 +121,21 @@
 - Support docker via docker repositories
 - Per-team repositories
 - Support for Kubernetes Helm Charts (Beta!!)
+- Aims to replace gitlab registry
 
 +++
 
-# Backporting applciations
+#### Application lifecycle
 
-- Still on ubuntu 16.04 or 14.04 in some cases
-- We do not take on upstream improvements, features, bugfixes, etc
-- Enabler for internal backporting requirements
-- Build on gitlab runners, publish to artifactory, deploy to end-systems
+- e.g. Most deployments on Ubuntu 16.04/14.04
+- What if we need a newer (latest?) version of upstream package?
+    - To take on upstream improvements/features
+    - Security hotfixes, bugfixes, etc
+- Gitlab can mirror upstream git repos
+- Gitlab triggers CI runner job to build software for target release
+- Runners publish software to artifactory repos via CLI or API
+- End-systems consume updates through artifactory repos
+- The entire end-to-end process is automatic
 
 +++
 
@@ -137,3 +147,9 @@
 - Problems with reachability across sites - PNB
 - Unable to prove integrations and productionization
 
+
+
+- why juju/foundation
+- common bundle
+- one bundle per deployment before -
+- Start with branch-env
