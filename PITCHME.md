@@ -10,24 +10,65 @@
 
 ## Runners Topology
 
-What?
+- Aim to provide shared runners to expedite jobs
+- Across both tenants and infrastructure
+- Across any datacenter
 
 +++
 
-# Runner topology
+## Zagreb Runners - Progress
 
-- Shared Runners Beta in Zagreb
-- Use cases
-- Tenant Bootstrap
-- Non-Critical
+- Shared Runners deployed in Zagreb
+- To complement those available in Budapest
+- Testing/adoption is blocked by lack of PNB
 
 +++
 
-# Future
+## Zagreb Runners - Progress ...
 
-- Open up once PNB permits Zagreb <-> Budapest
-- Untagged jobs?
+- Tighter integration with SC (v2) using terraform/ansible
+- Deployable using minimal requirements (just ITOT-Jumphost)
+- Good separation of concernts - config away from code
 - Ready to deploy runners in other SCv2 sites
+
++++
+
+## Zagreb Runners - Progress ...
+
+- Use cases
+- Facilitate the bootstrap of tenant deployments
+- Designed for Non-Critical workloads, provided as best-effort
+- May eventually be a fallback for runners in SC-HUBUDB1
+- CAVEAT: CI Jobs must be tagged with DC Label/Identifier
+
++++
+
+## Runner - Progress
+
+- Shared runners have problems (security, debuggability)
+- Pipelines should incorporate private runners for in-tenant config/deploy
+- We provide an ansible role and example plays to help
+- Role supports different executor types
+
++++
+
+# Impediments - PNB
+
+- Use of IPSec tunnels between Zagreb and Budapest
+- Very poor bandwidth (~40kbps) to gitlab
+- Downloads of docker images _very slow_
+- Other problems with runner reliability, registration, git cloning
+- Jobs time out even before execution begins
+- Need to be aware of this in future DC deployments
+
+## Impediment - HTTP_PROXY
+
+- Currently not possible to port CI jobs as-is to Zagreb
+- Jobs/images for Budapest jobs 'bake in' environment config (e.g. HTTP_PROXY)
+- Docker images are not portable to other sites
+- Env config can be managed by runners (plan to fix)
+- Still requires end-users to update
+- Untagged jobs? (Backup for runners in SC Budapest)
 
 +++
 
