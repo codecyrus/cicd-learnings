@@ -1,34 +1,36 @@
 # <span style="font-family:Helvetica Neue; font-weight:bold">
-<span style="color:#e49436">Infrastructure</span> as Code</span>
+<span style="color:#e49436">CICD Learnings</span>
 
-* CICD Learnings
-* Runner Topology
-* Artifactory
+* Lessons learnt from CICD
+* Progress Updates to CICD Strategy/Tools
 * Problems, Mitigations
 
 ---
 
 ## Runners Topology
 
-- Aim to provide shared runners to expedite jobs
-- Across both tenants and infrastructure
+- Aim to provide shared runners to expedite CI jobs
+- Across infrastructure and tenants
 - Across any datacenter
 
 +++
 
 ## Zagreb Runners - Progress
 
+- First attempt at providing runners in a different datacenter
 - Shared Runners deployed in Zagreb
 - To complement those available in Budapest
-- Testing/adoption is blocked by lack of PNB
 
 +++
 
-## Zagreb Runners - Progress ...
+### Zagreb Runners - Progress ...
 
 - Tighter integration with SC (v2) using terraform/ansible
+- Runners themselves deployed by (meta) pipelines
 - Deployable using minimal requirements (just ITOT-Jumphost)
-- Good separation of concernts - config away from code
+- Good separation of concerns
+  - Env. config is split away from code
+  - Easier to provide consistency across current/future sites.
 - Ready to deploy runners in other SCv2 sites
 
 +++
@@ -51,8 +53,9 @@
 
 +++
 
-# Impediments - PNB
+### Impediments - PNB
 
+- Testing/adoption is blocked by lack of PNB
 - Use of IPSec tunnels between Zagreb and Budapest
 - Very poor bandwidth (~40kbps) to gitlab
 - Downloads of docker images _very slow_
@@ -73,14 +76,14 @@
 
 +++
 
-# Problems
+### Problems
 
 - (Non)-Portability of images prepared in SC-HUBUDB1
 - SCv2 Reliability
 
 ---
 
-# Artifactory
+### Artifactory
 
 picture here ...
 
@@ -91,7 +94,7 @@ picture here ...
 
 +++
 
-# Use cases
+### Use cases
 
 - Proxy for accessing application binaries from 3rd parties/upstream
 - Binaries supported
@@ -108,7 +111,7 @@ picture here ...
 
 +++
 
-# Blockers
+### Blockers
 
 - Poor adoption - blocking full integration
 - Misunder
@@ -116,7 +119,7 @@ picture here ...
 
 +++
 
-# Trusted container repository
+### Trusted container repository
 
 - Support docker via docker repositories
 - Per-team repositories
@@ -140,21 +143,36 @@ picture here ...
 
 - Gitlab mirrors upstream git repo
 - Gitlab triggers CI runner job to build software for target release
-- Runners publish software to artifactory repos via CLI or API
-- End-systems consume updates through artifactory repos
+- Runners revision/publish artefacts (build) via CLI or API
+- End-systems consume updates through repos
 - The entire end-to-end process is automatic
+
+Package signing (GPG)
 
 +++
 
-# State of the -union-
+### Status of the rollout
 
 - Beta has been available since end of march
-- Testing of typical use-cases
-- Adoption is quite low
-- Problems with reachability across sites - PNB
-- Unable to prove integrations and productionization
+- Beta adoption is quite low
+- Problems with connectivity to artifactory
+  - Unable to prove integrations
+  - LDAP/IDP
+  - Gitlab Runners
 
+### State of the union ...
 
+- Testing of typical use-cases is mostly complete
+  - Binary repositories
+  - Unstructured repositories
+- Still to cover
+  - Delegated administration (user/groups)
+  - Unstructured repositories (Onboarding/Orchestration/LTaaS)
+  - Bridge to gitlab (VCS repos - ansible, terraform, etc)
+
++++
+
+## TODO
 
 - why juju/foundation
 - common bundle
