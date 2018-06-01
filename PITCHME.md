@@ -94,37 +94,42 @@ picture here ...
 
 +++
 
-### Use cases
+### Use cases - Vendor Binaries
 
-- Proxy for accessing application binaries from 3rd parties/upstream
-- Binaries supported
-- Can be done in a controlled fashion
+- Way out for tenants to access vendor distribution repos/channels
+  - Access of 3rd parties/upstream binaries
+  - End-systems need to subscribe to repositories
+  - Point of control for binaries entering the system
+- Binaries supported for most popular distributions
+  - .deb (Debian, Ubuntu, etc)
+  - .rpm (RHEL, Centos)
+  - Containers (Docker/OCI, Helm chars)
+  - Code (PyPi, Golang, Ruby Gems, PHP, npm, Maven/Gradle, etc)
+  - opkg/ipkg
+  - DevOps (Puppet, Chef) - No ansible/terraform :|
 
 +++
 
-### Repository for VNF artefacts
+### Repository for custom artefacts
 
-- Artefact cache for VNF artefacts (VM images, CSAR Files)
+- Artefact cache for VNF artefacts
+  - VM images
+  - CSAR Files
+  - Test Artefacts
 - Versioned artefacts
-- Taggable with PropertySets (e.g. Datacenter location, VNF)
+    - Metadata PropertySets (e.g. Datacenter location, VNF)
+    - Rich query language
 - Publish once - deploy anywhere
-
-+++
-
-### Blockers
-
-- Poor adoption - blocking full integration
-- Misunder
-- A story required to support users/groups in this model
+  - Aim to provide datacenter-local caching proxies
 
 +++
 
 ### Trusted container repository
 
-- Support docker via docker repositories
-- Per-team repositories
-- Support for Kubernetes Helm Charts (Beta!!)
-- Aims to replace gitlab registry
+- Support for docker repositories
+  - Will eventually replace gitlab registry
+  - Opens possibility for image inspection (XRay)
+- Support for Kubernetes Helm Charts (Beta!)
 
 +++
 
@@ -139,15 +144,14 @@ picture here ...
 
 +++
 
-#### Application lifecycle ...
+#### Application lifecycle ... how
 
-- Gitlab mirrors upstream git repo
-- Gitlab triggers CI runner job to build software for target release
-- Runners revision/publish artefacts (build) via CLI or API
-- End-systems consume updates through repos
-- The entire end-to-end process is automatic
-
-Package signing (GPG)
+- Gitlab + Runners + Artifactory
+  - Gitlab mirrors upstream git repo
+  - Gitlab triggers CI runner job to build software for target release
+  - Runners revision/publish artefacts (build) via CLI or API
+  - End-systems consume updates through repos
+  - end-to-end automatic process
 
 +++
 
@@ -171,6 +175,13 @@ Package signing (GPG)
   - Bridge to gitlab (VCS repos - ansible, terraform, etc)
 
 +++
+
+### Blockers
+
+- Poor adoption - blocking full testing
+- Story required to support users/groups in this model
+- Platform
+- PNB
 
 ## TODO
 
