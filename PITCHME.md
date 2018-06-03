@@ -162,6 +162,10 @@ picture here ...
 
 ![Package Build Pipeline](img/pkg-ci-pipeline.png)
 
++++
+
+#### Build infrastructure
+
 - Gitlab + Runners + Artifactory
   - Gitlab mirrors upstream git repo
   - Gitlab triggers CI runner job to build software for target release
