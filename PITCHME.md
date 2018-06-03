@@ -160,6 +160,8 @@ picture here ...
 
 #### Build infrastructure
 
+![Package Build Pipeline](img/pkg-ci-pipeline.png)
+
 - Gitlab + Runners + Artifactory
   - Gitlab mirrors upstream git repo
   - Gitlab triggers CI runner job to build software for target release
@@ -192,19 +194,12 @@ picture here ...
 
 - Testing of typical use-cases is mostly complete
 - Still to cover
+  - VNF repositories (Onboarding/Orchestration/LTaaS)
   - Delegated administration (user/groups)
-  - Unstructured repositories (Onboarding/Orchestration/LTaaS)
   - Bridge to gitlab (VCS repos - ansible, terraform, etc)
   - Repository Replication
 
 +++
-
-### Blockers
-
-- Poor adoption - blocking full testing
-- Story required to support users/groups in this model
-- Platform
-- PNB
 
 ## TODO
 
