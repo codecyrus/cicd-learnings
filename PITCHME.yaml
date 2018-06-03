@@ -1,0 +1,3 @@
+mathjax : TeX-AMS_HTML-full
+charts : true
+theme-override : css/PITCHME.css
