@@ -195,6 +195,8 @@ picture here ...
   - Replication
   - Build Integration
 
++++
+
 ### Rollout status
 
 - Slow difficult process
@@ -204,6 +206,8 @@ picture here ...
   - Unable to prove integrations
   - LDAP/IDP
   - Gitlab Runners
+
++++
 
 ### Rollout status
 
