@@ -181,8 +181,19 @@ picture here ...
   - Will eventually replace the gitlab registry
 - Opens possibility for image inspection (JFrog XRay/Enterprise+)
 - Support for Kubernetes Helm Charts (Beta!)
+- Odd requirement on DNS
 
 +++
+
+### Roadmap
+
+- Q1-Q2
+  - Expose out-of-box repos
+  - Beta
+- Q3
+  - Further requirements gathering
+  - Replication
+  - Build Integration
 
 ### Rollout status
 
@@ -213,3 +224,5 @@ picture here ...
 - common bundle
 - one bundle per deployment before -
 - Start with branch-env
+
+
