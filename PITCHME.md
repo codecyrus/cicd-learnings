@@ -207,6 +207,8 @@ picture here ...
 
 ## TODO
 
+![Branch To Environment Mapping](img/branch-env-mapping.png)
+
 - why juju/foundation
 - common bundle
 - one bundle per deployment before -
