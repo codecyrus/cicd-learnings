@@ -23,9 +23,6 @@
 
 - Version: 10.7
   - One month behind Gitlab
-- Users: 232
-- Groups: 57
-- Projects: 985
 
 ![right fit](img/gl_stats.png)
 
