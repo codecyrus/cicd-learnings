@@ -1,7 +1,7 @@
 # <span style="font-family:Helvetica Neue; font-weight:bold">
 <span style="color:#e49436">CICD Learnings</span>
 
-* Lessons learnt from CICD
+* CICD lessons learnt on the ground
 * Progress Updates to CICD Strategy/Tools
 * Problems, Mitigations
 * Your contribution - ideas, improvements
