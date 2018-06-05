@@ -15,7 +15,7 @@
 
 +++
 
-![Video](https://github.com/shalomb/cicd-learnings/blob/master/img/cicd-in-practice.m4v?raw=true)
+![Video](https://github.com/shalomb/cicd-learnings/blob/master/img/cicd-in-practice.mp4?raw=true)
 
 ---
 
