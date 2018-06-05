@@ -283,7 +283,6 @@ picture here ...
 
 #### Artefacts for Application lifecycle
 
-
 - What if I need
   - To take on upstream improvements/features
   - Security hotfixes, bugfixes, etc
