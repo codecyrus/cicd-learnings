@@ -52,6 +52,8 @@
 - .gitlab-ci.yml file to define the stages and jobs
 - Gitlab Runner is used to run the jobs and send the results back to GitLab
 
++++
+
 ![right fit](img/ci-cd-architecture_2x.png)
 
 +++
@@ -89,6 +91,8 @@ build:
   only:
     - master
 ```
+
++++
 
 ![right fit](img/pipeline.png)
 
