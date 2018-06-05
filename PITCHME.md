@@ -265,7 +265,7 @@ The ugly:
 
 #### Artefacts for Application lifecycle
 
-[Package Stack](img/pkg-stack.png)
+![Package Stack](img/pkg-stack.png)
 
 +++
 
