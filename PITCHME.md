@@ -227,11 +227,9 @@ The ugly:
 
 ### Artifactory
 
-picture here ...
-
 - The universal binary repository manager
-  - Internal + External binaries
-  - Source code?
+  - Internal + External binaries (artefacts)
+  - Complements gitlab (binaries vs source code)
 - Optimized pipelines
   - Code + binary reuse
   - Consistent deployments
@@ -258,8 +256,8 @@ picture here ...
   - CSAR Files
   - Test Artefacts
 - Versioned artefacts
-    - Metadata PropertySets (e.g. Datacenter location, VNF, En)
-    - Rich query language
+  - Metadata PropertySets (e.g. Datacenter location, VNF, En)
+  - Rich query language
 - Publish once - deploy anywhere
   - Aim to provide access across datacenters
 
@@ -273,10 +271,10 @@ picture here ...
 
 #### Artefacts for Application lifecycle
 
-- What if I need
+- What if we need
   - To take on upstream improvements/features |
   - Security hotfixes, bugfixes, etc |
-- Conversely, What if we need older versions no longer available? |
+  - Patches, Tweaks |
 
 +++
 
