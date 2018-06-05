@@ -5,6 +5,8 @@
 * Progress Updates to CICD Strategy/Tools
 * Problems, Mitigations
 
+---
+
 ## CI/CD
 
 - Continuous Integration is the practice of integrating code into a shared repository and building/testing each change automatically
@@ -13,7 +15,9 @@
 
 +++
 
-![Video](img/cicd-in-practice.m4v)
+![Video](https://github.com/shalomb/cicd-learnings/blob/master/img/cicd-in-practice.m4v?raw=true)
+
+---
 
 ## Gitlab
 
