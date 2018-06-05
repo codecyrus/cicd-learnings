@@ -279,14 +279,20 @@ picture here ...
   - Aim to provide access across all datacenters
     - datacenter-local caching proxies or JFrog Enterprise+
 
-+++?img/pkg-stack.png
++++
+
+#### Artefacts for Application lifecycle
+
+[Package Stack](img/pkg-stack.png)
+
++++
 
 #### Artefacts for Application lifecycle
 
 - What if I need
-  - To take on upstream improvements/features
-  - Security hotfixes, bugfixes, etc
-- Conversely, What if we need older versions no longer available?
+  - To take on upstream improvements/features |
+  - Security hotfixes, bugfixes, etc |
+- Conversely, What if we need older versions no longer available? |
 
 +++
 
