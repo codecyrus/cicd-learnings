@@ -297,7 +297,7 @@ The ugly:
 
 #### Artifact delivery infrastrcture
 
-![Artifact Delivery Infrastructure](img/artifact-delivery-infrastructure.png)
+![Artifact Delivery Infrastructure](img/jf-artifact-delivery-infrastructure.png)
 
 +++
 
