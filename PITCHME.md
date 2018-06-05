@@ -224,13 +224,19 @@ The bad:
 The ugly:
 - Not opensource
 
++++
+
+## Branching
+
+![Be-Branch-Env-Mapping](img/branch-env-mapping.png)
+
 ---
 
 ### Artifactory
 
 - The universal binary repository manager
-  - Internal + External binaries (artefacts)
   - Complements gitlab (binaries vs source code)
+  - Internal + External binaries (artefacts)
 - Optimized pipelines
   - Code + binary reuse
   - Consistent deployments
