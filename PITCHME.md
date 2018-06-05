@@ -9,6 +9,8 @@
 
 ## CI/CD
 
+![CICD Pipeline](img/cicd_pipeline.png)
+
 - Continuous Integration is the practice of integrating code into a shared repository and building/testing each change automatically
 - Continuous Delivery adds that the software can be released to production at any time, often by automatically pushing changes to a staging system.
 - Continuous Deployment goes further and pushes changes to production automatically.
