@@ -189,14 +189,15 @@ build:
 - MR approvers to do code review
 - Deployment with Foundation and Juju
 - Common bundle for all the deployments
+- Common pipeline for all the deployments
 - Differences between environments applied with `juju overlay` option
 
 +++
 
 ## CI/CD Improvements
 
-- Integration with NetBox
-- Automatically import information into `.yaml` files
+- Improved automation/integration with NetBox
+- Automatically import information from NB into `.yaml` files
 
 +++
 
@@ -271,8 +272,10 @@ The ugly:
 
 #### Artefacts for Application lifecycle
 
-- What if we need
-  - To take on upstream improvements/features |
+- Deployment Packages, versions and dependencies fixed
+  - Can be inflexible
+- What if we are forced
+  - To take on upstream improvements/features
   - Security hotfixes, bugfixes, etc |
   - Patches, Tweaks |
 
