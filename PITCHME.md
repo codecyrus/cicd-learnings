@@ -197,6 +197,7 @@ Forced to if zag is a fall back
 ---
 
 ## Beryllium CI/CD
+
 - IaC
 - No push to master branch
 - MR approvers to do code review
@@ -206,8 +207,26 @@ Forced to if zag is a fall back
 
 +++
 
+## CI/CD Improvements
+
+- Integration with NetBox
+- Automatically import information into `.yaml` files
+
++++
+
+## CI/CD Improvements - Config Mgmt
+
+- Common bundle for all deployments
+- Bundle configuration merged at runtime
+- Follows DRY ("Don't Repeat Yourself") principles
+- Avoids having to make changes to multiple repos
+
++++
+
 ## Foundation
+
 The Good:
+
 - Automates deployment from MAAS
 - Simplified yaml config files
 - Faster deployment
