@@ -21,8 +21,7 @@
 
 ## Gitlab
 
-- Version: 10.7
-  - One month behind Gitlab
+- Version: 10.7 (One month behind Gitlab)
 
 ![right fit](img/gl_stats.png)
 
