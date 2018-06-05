@@ -256,6 +256,16 @@ picture here ...
 
 +++
 
+### Binary distribution + access
+
+![Repo List](img/jf-rt-repo-types.png)
+
+- Access vendor distribution repos/channels
+  - Access of 3rd parties/upstream binaries
+  - Point of control for binaries entering the system
+
++++
+
 ### Repository for custom artefacts
 
 - Repository infrastructure for VNF artefacts
@@ -268,16 +278,6 @@ picture here ...
 - Publish once - deploy anywhere
   - Aim to provide access across all datacenters
     - datacenter-local caching proxies or JFrog Enterprise+
-
-+++
-
-### Binary distribution + access
-
-- Access vendor distribution repos/channels
-  - Access of 3rd parties/upstream binaries
-  - Point of control for binaries entering the system
-
-![Repo List](img/jf-rt-repo-types.png)
 
 +++
 
@@ -299,14 +299,9 @@ picture here ...
 
 +++
 
-#### Build infrastructure
+#### Artifact delivery infrastrcture
 
-- Gitlab + Runners + Artifactory
-  - Gitlab mirrors upstream git repo
-  - Gitlab triggers CI runner job to build software for target release
-  - Runners revision/publish artefacts (build) via CLI or API
-  - End-systems consume updates through repos
-  - end-to-end automatic process
+![Artifact Delivery Infrastructure](img/artifact-delivery-infrastructure.png)
 
 +++
 
