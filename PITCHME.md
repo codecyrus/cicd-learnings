@@ -100,8 +100,7 @@ build:
 
 ## Runners Topology
 
-Picture here
-
+- Push for more IaC
 - Aim to provide a gitlab runner architecture
   - Across datacenters
   - Across infrastructure and tenants
@@ -111,10 +110,10 @@ Picture here
 
 ## Zagreb Runners - Progress
 
-- Demand for runners local to datacenters
+- Demand for shared DC-local runners
   - Runner consistency required across DCs
 - Shared Runners deployed in Zagreb
-  - complements those available in Budapest
+  - Complements those available in Budapest
   - Some differences
 - Allow routing/pinning of CI jobs to datacenters
   - CI Jobs just need tags (e.g. SCv2-HRZAGT1, SC-HUBUDB1)
@@ -123,8 +122,7 @@ Picture here
 
 ### Zagreb Runners - Progress ...
 
-- Full end-to-end pipeline with terraform/ansible on SCv2
-  - Better integration with Openstack (Over SCv1)
+- Full deployment with terraform/ansible on SCv2
   - Runners themselves deployed by (meta) pipelines
   - Deployable using minimal requirements (just itot-jumphost)
   - Better separation of concerns
@@ -136,27 +134,24 @@ Picture here
 
 ## Runners - Use cases ..
 
-- Designed for Non-Critical workloads, provided as best-effort
+- Designed for Non-Critical workloads - best-effort
   - Facilitate the bootstrap of OS tenant deployments
   - Fallback for CI jobs run in Budapest (Caveats apply!)
   - Not a substitute for a real IaaS/PaaS
   - Services should be deployed to tenants
-- CI Jobs will start to require tags with DC Label/Identifier
+- Tags are DC Label/Identifier
+  - e.g. IC-HRZAGT1, IC-HRBUDB1, SC-HUBUDB1
   - Requires update to .gitlab-ci.yml
   - Affects docker images (many/most tied to Budapest)
-
-Forced to if zag is a fall back
-
-+++
 
 ## Runners - Multi-stage CI Jobs
 
 - Shared runners have problems
   - Runner outside env (SGs required to allow SSH, etc in)
   - Security of secrets (different jobs run as the same user)
-  - (arguably) harder to debug than (re)using an accessible runner
+  - (arguably) harder to debug than using an accessible runner
 - Our recommendations
-  - Setup Multi-stage pipelines
+  - Setup Multi-stage pipelines (shared + private)
   - Incorporate dedicated/private runners for in-tenant config/deploy
   - Easier for branch-to-env routing of CI jobs
   - We provide an ansible role and examples, documentation
@@ -166,7 +161,7 @@ Forced to if zag is a fall back
 
 ### Impediments - PNB
 
-- Testing/adoption was blocked by lack of PNB
+- Testing/adoption impeded by lack of OAM/PNB
   - IPSec tunnels, poor bandwidth/latency to gitlab, etc
   - Problems with runner registration, preparation, git cloning
   - Need to ensure all DC rollouts are on PNB!!
@@ -177,22 +172,13 @@ Forced to if zag is a fall back
 
 +++
 
-## Impediment - HTTP_PROXY
+## Problems - Env. Vars.
 
-- SCv1 design requires use of a http_proxy to access remote content
-  - Currently not possible to port these CI jobs as-is to Zagreb
-  - Jobs/images for Budapest jobs 'bake in' environment config (e.g. HTTP_PROXY)
+- SCv1 forces use of HTTP_PROXY
+  - Vars "baked-in" to Dockerfiles, .gitlab-ci.yml
+  - Currently not possible to port these CI jobs
   - Env config can (should) be managed by runners (plan to fix)
-  - Or we defer the need for HTTP_PROXY
-  - Still requires end-users to update
 - Untagged jobs? (Backup for runners in SC Budapest)
-
-+++
-
-### Problems
-
-- (Non)-Portability of images prepared in SC-HUBUDB1
-- SCv2 Reliability
 
 ---
 
