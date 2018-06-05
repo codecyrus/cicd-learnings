@@ -5,6 +5,90 @@
 * Progress Updates to CICD Strategy/Tools
 * Problems, Mitigations
 
+## CI/CD
+
+- Continuous Integration is the practice of integrating code into a shared repository and building/testing each change automatically
+- Continuous Delivery adds that the software can be released to production at any time, often by automatically pushing changes to a staging system.
+- Continuous Deployment goes further and pushes changes to production automatically.
+
++++
+
+![Video](img/cicd-in-practice.m4v)
+
+## Gitlab
+
+- Version: 10.7
+  - One month behind Gitlab
+- Users: 232
+- Groups: 57
+- Projects: 985
+
+![right fit](img/gl_stats.png)
+
++++
+
+## One year ago
+
+![inline fill](img/gitlab-statistics-2017.png)
+
++++
+
+## Gitlab CI/CD Statistics
+- Total Pipelines: 34937
+- Total Jobs: 117579
+- Pipelines / day: ~90
+- Jobs / day: ~300
+- Shared runners: 4
+- Private runners: 10
+
+![right](img/gl_records.jpg)
+
++++
+
+## Gitlab CI/CD
+- .gitlab-ci.yml file to define the stages and jobs
+- Gitlab Runner is used to run the jobs and send the results back to GitLab
+
+![right fit](img/ci-cd-architecture_2x.png)
+
++++
+
+## gitlab-ci.yml example
+
+```yaml
+image: docker:latest
+
+stages:
+  - test
+  - build
+
+variables:
+  IMAGE_TAG: $CI_REGISTRY_IMAGE:$CI_COMMIT_SHA
+
+before_script:
+  - docker login -u gitlab-ci-token -p $CI_JOB_TOKEN $CI_REGISTRY
+
+test_build:
+  stage: test
+  tags:
+    - docker
+  script:
+    - docker build -t $IMAGE_TAG -t $CI_REGISTRY_IMAGE:latest .
+
+build:
+  stage: build
+  tags:
+    - docker
+  script:
+    - docker build -t $IMAGE_TAG -t $CI_REGISTRY_IMAGE:latest .
+    - docker push $IMAGE_TAG
+    - docker push $CI_REGISTRY_IMAGE:latest
+  only:
+    - master
+```
+
+![right fit](img/pipeline.png)
+
 ---
 
 ## Runners Topology
@@ -102,6 +186,30 @@ Forced to if zag is a fall back
 
 - (Non)-Portability of images prepared in SC-HUBUDB1
 - SCv2 Reliability
+
+---
+
+## Beryllium CI/CD
+- IaC
+- No push to master branch
+- MR approvers to do code review
+- Deployment with Foundation and Juju
+- Common bundle for all the deployments
+- Differences between environments applied with `juju overlay` option
+
++++
+
+## Foundation
+The Good:
+- Automates deployment from MAAS
+- Simplified yaml config files
+- Faster deployment
+
+The bad:
+- Not idempotent, therefore not ready for CI/CD
+
+The ugly:
+- Not opensource
 
 ---
 
