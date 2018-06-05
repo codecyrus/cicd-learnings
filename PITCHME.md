@@ -275,7 +275,7 @@ picture here ...
     - Metadata PropertySets (e.g. Datacenter location, VNF, En)
     - Rich query language
 - Publish once - deploy anywhere
-  - Aim to provide artefact access across datacenters
+  - Aim to provide access across datacenters
 
 +++
 
