@@ -276,8 +276,7 @@ picture here ...
     - Metadata PropertySets (e.g. Datacenter location, VNF, En)
     - Rich query language
 - Publish once - deploy anywhere
-  - Aim to provide access across all datacenters
-    - datacenter-local caching proxies or JFrog Enterprise+
+  - Aim to provide artefact access across all datacenters
 
 +++
 
