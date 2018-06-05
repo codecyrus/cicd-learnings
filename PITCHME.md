@@ -4,6 +4,7 @@
 * Lessons learnt from CICD
 * Progress Updates to CICD Strategy/Tools
 * Problems, Mitigations
+* Your contribution - ideas, improvements
 
 ---
 
@@ -289,6 +290,16 @@ The ugly:
 
 +++
 
+### Trusted container repository
+
+- Support for docker repositories
+  - Will eventually replace the gitlab registry
+- Opens possibility for image inspection (JFrog XRay/Enterprise+)
+- Support for Kubernetes Helm Charts (Beta!)
+- Odd requirement on DNS - FQDN per repo
+
++++
+
 #### Build infrastructure
 
 ![Package Build Pipeline](img/pkg-ci-pipeline.png)
@@ -301,58 +312,29 @@ The ugly:
 
 +++
 
-### Trusted container repository
-
-- Support for docker repositories
-  - Will eventually replace the gitlab registry
-- Opens possibility for image inspection (JFrog XRay/Enterprise+)
-- Support for Kubernetes Helm Charts (Beta!)
-- Odd requirement on DNS
-
-+++
-
 ### Roadmap
 
 - Q1-Q2
-  - Expose out-of-box repos
-  - Beta
+  - Expose out-of-box functionality
+  - App. Orch. Use cases
+  - Beta announced in march
 - Q3
-  - Further requirements gathering
-  - Replication
+  - Continued beta
+  - Expose more use-cases/integrations
+  - IC local artefact access
+  - LDAP/IDP - Authentication + Authorization
   - Build Integration
 
-+++
+### Roadmap - other
 
-### Rollout status
+- DevSecOps
+  - XRay
+- Delegated administration
+  - Self-service
+- Improved HA + Repo Replication
+  - DNS LB
+- Gitlab Bridge - VCS (ansible, terraform, etc)
 
-- Slow difficult process
-- Beta has been available since end of march
-  - Adoption is low
-- Problems with connectivity to artifactory
-  - Unable to prove integrations
-  - LDAP/IDP
-  - Gitlab Runners
+---
 
-+++
-
-### Rollout status
-
-- Testing of typical use-cases is mostly complete
-- Still to cover
-  - VNF repositories (Onboarding/Orchestration/LTaaS)
-  - Delegated administration (user/groups)
-  - Bridge to gitlab (VCS repos - ansible, terraform, etc)
-  - Repository Replication
-
-+++
-
-## TODO
-
-![Branch To Environment Mapping](img/branch-env-mapping.png)
-
-- why juju/foundation
-- common bundle
-- one bundle per deployment before -
-- Start with branch-env
-
-
+### Thank You!
