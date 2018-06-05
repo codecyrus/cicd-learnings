@@ -279,14 +279,12 @@ picture here ...
   - Aim to provide access across all datacenters
     - datacenter-local caching proxies or JFrog Enterprise+
 
-+++
++++?img/pkg-stack.png
 
-#### Build infrastructure / Application lifecycle
+#### Artefacts for Application lifecycle
 
-![Package Stack](img/pkg-stack.png)
 
-- e.g. Most deployments on Ubuntu 16.04/14.04
-- What if we need a newer (latest?) version of upstream package?
+- What if I need
   - To take on upstream improvements/features
   - Security hotfixes, bugfixes, etc
 - Conversely, What if we need older versions no longer available?
