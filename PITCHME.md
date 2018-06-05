@@ -34,14 +34,17 @@
 +++
 
 ## Gitlab CI/CD Statistics
+
+![right](img/gl_records.jpg)
+
++++
+
 - Total Pipelines: 34937
 - Total Jobs: 117579
 - Pipelines / day: ~90
 - Jobs / day: ~300
 - Shared runners: 4
 - Private runners: 10
-
-![right](img/gl_records.jpg)
 
 +++
 
