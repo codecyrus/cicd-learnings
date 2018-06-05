@@ -243,21 +243,27 @@ The ugly:
 
 picture here ...
 
-- The universal binary repository
-- Pan-Net vision - add an important validator to the CI/CD pipeline
-- Testing/Security/Pre-emptive monitoring
-- Consistent deployments
+- The universal binary repository manager
+  - Internal + External binaries
+  - Source code?
+- Optimized pipelines
+  - Code + binary reuse
+  - Consistent deployments
+  - QA
+- Validated pipelines
+  - Binaries are sometimes blackholes
+  - DevSecOps
 
 +++
 
 ### Repository for custom artefacts
 
 - Repository infrastructure for VNF artefacts
-  - VM images
+  - VM images, Software Packages, etc
   - CSAR Files
   - Test Artefacts
 - Versioned artefacts
-    - Metadata PropertySets (e.g. Datacenter location, VNF)
+    - Metadata PropertySets (e.g. Datacenter location, VNF, En)
     - Rich query language
 - Publish once - deploy anywhere
   - Aim to provide access across all datacenters
@@ -270,13 +276,8 @@ picture here ...
 - Access vendor distribution repos/channels
   - Access of 3rd parties/upstream binaries
   - Point of control for binaries entering the system
-- Binaries supported for most popular distributions
-  - .deb (Debian, Ubuntu, etc)
-  - .rpm (RHEL, Centos)
-  - Containers (Docker/OCI, Helm chars)
-  - Code (PyPi, Golang, Ruby Gems, PHP, npm, Maven/Gradle, etc)
-  - opkg/ipkg
-  - DevOps (Puppet, Chef) - No ansible/terraform :|
+
+![Repo List](img/jf-rt-repo-types.png)
 
 +++
 
