@@ -184,8 +184,8 @@ build:
 
 ## Beryllium CI/CD
 
-- IaC
-- No push to master branch
+- Better IaC
+- No push to `master` branch
 - MR approvers to do code review
 - Deployment with Foundation and Juju
 - Common bundle for all the deployments
