@@ -251,7 +251,6 @@ picture here ...
   - Consistent deployments
   - QA
 - Validated pipelines
-  - Binaries are sometimes blackholes
   - DevSecOps
 
 +++
