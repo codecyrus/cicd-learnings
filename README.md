@@ -1,2 +1,5 @@
 # cicd-learnings
-Talk on cicd learnings at pf-campus
+
+Talk on CICD Learnings, presented at PF Campus, June 2018
+
+* [View presentation on gitpitch](https://gitpitch.com/shalomb/cicd-learnings#/)
